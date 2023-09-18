@@ -1,0 +1,20 @@
+{% extends "web/app/app_base.html" %}
+{% load static %}
+{% block app %}
+    <div id="object-home"></div>
+{% endblock %}
+{% block page_js %}
+    {{ department_choices|json_script:'department-choices' }}
+    <script type="application/javascript">
+        // initialize any page specific stuff here
+        // static files that are used by the page javascript.
+        const STATIC_FILES = {
+            'undraw_empty': "{% static 'images/undraw/undraw_empty.svg' %}",
+        };
+        const EMPLOYEE_DEPARTMENT_CHOICES = JSON.parse(document.getElementById('department-choices').textContent);
+        const urlBase = "{{ url_base }}";
+    </script>
+    <script src="{% static 'rest_framework/js/coreapi-0.1.1.js' %}"></script>
+    <script src="{% url 'api_schemajs' %}"></script>
+    <script src="{% static 'js/react-object-bundle.js' %}"></script>
+{% endblock %}

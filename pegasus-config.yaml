@@ -1,0 +1,18 @@
+default_context:
+  _pegasus_version: '1.0'
+  author_name: Hittapa AB
+  css_framework: bootstrap
+  database: sqlite
+  deploy_platform: heroku
+  description: Vanguard for Crypto
+  domain_name: localhost:8000
+  email: hittapa63@gmail.com
+  enable_google_login: y
+  front_end_framework: react
+  project_name: Bundl
+  project_slug: bundl_finance
+  stripe_payment_mode: both
+  use_docker: n
+  use_impersonation: n
+  use_subscriptions: n
+  use_teams: n

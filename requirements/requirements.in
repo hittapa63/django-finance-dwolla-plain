@@ -1,0 +1,10 @@
+Django
+django-allauth
+djangorestframework
+coreapi  # DRF schemas and docs
+stripe
+dj-stripe
+django-anymail[mailgun]  # email services
+celery-progress
+celery
+celery[redis]
